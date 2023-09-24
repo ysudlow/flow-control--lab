@@ -1,6 +1,6 @@
 # flow control  lab
  
- import java.util.Scanner;
+import java.util.Scanner;
 
 public class NumberOperations {
     public static void main(String[] args) {
@@ -9,8 +9,8 @@ public class NumberOperations {
         int num1, num2;
         int diff;
 
+        // Prompt the user to enter two numbers
         do {
-            // Prompt the user to enter two numbers
             System.out.print("Enter the first number: ");
             num1 = input.nextInt();
 
@@ -20,6 +20,7 @@ public class NumberOperations {
             // Calculate the difference between the numbers
             diff = Math.abs(num1 - num2);
 
+            // Check if the difference is less than 200 and prompt the user to try again
             if (diff < 200) {
                 System.out.println("The difference between the numbers is less than 200. Please try again.");
             }
