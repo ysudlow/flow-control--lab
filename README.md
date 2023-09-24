@@ -1,27 +1,29 @@
 # flow control  lab
  
- 
-import java.util.Scanner;
+ import java.util.Scanner;
 
 public class NumberOperations {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        // Prompt the user to enter two numbers
-        System.out.print("Enter the first number: ");
-        int num1 = input.nextInt();
+        int num1, num2;
+        int diff;
 
-        System.out.print("Enter the second number: ");
-        int num2 = input.nextInt();
+        do {
+            // Prompt the user to enter two numbers
+            System.out.print("Enter the first number: ");
+            num1 = input.nextInt();
 
-        // Calculate the difference between the numbers
-        int diff = Math.abs(num1 - num2);
+            System.out.print("Enter the second number: ");
+            num2 = input.nextInt();
 
-        // Check if the difference is less than 200
-        if (diff < 200) {
-            System.out.println("The difference between the numbers is less than 200. Exiting.");
-            System.exit(0);
-        }
+            // Calculate the difference between the numbers
+            diff = Math.abs(num1 - num2);
+
+            if (diff < 200) {
+                System.out.println("The difference between the numbers is less than 200. Please try again.");
+            }
+        } while (diff < 200);
 
         // Calculate and display the sums based on the criteria
         calculateAndDisplaySums(num1, num2);
